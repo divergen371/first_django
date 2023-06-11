@@ -33,5 +33,8 @@
 - MVT(model-view-template)という考え方に基づいて設計されている。
 - URLにアクセスするとViewが機能しモデルやテンプレートを呼び出す。
 - モデルは`models.py`
+  - データベース連携
 - Viewは`Views.py`、`urls.py`
+  - `views`はロジック、`urls`はルーティング
+  - `views`テンプレートの呼び出し、モデルの呼び出し
 - テンプレートは`<アプリディレクトリ>/templates/*`
