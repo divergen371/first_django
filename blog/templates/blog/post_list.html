@@ -2,7 +2,8 @@
 
 {% block content %}
 {% for post in posts %}
-  <div class="card w-75 mt-3 mx-auto">
+    {% if post.is_published %}
+    <div class="card w-75 mt-3 mx-auto">
     <div class="card-body">
         <h2 class="card-title">{{ post.title }}</h2>
         <p class="card-text">{{ post.content | truncatechars:30 }}</p>
@@ -10,6 +11,7 @@
             <a href="{% url "post_detail" post.pk%}" class="btn btn-dark">続きを読む</a>
         </div>
     </div>
-  </div>
+    </div>
+    {% endif %}
 {% endfor %}
 {% endblock content %}
