@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "first-django"
+version = "0.1.0"
+description = ""
+authors = ["divergen371 <51857554+divergen371@users.noreply.github.com>"]
+readme = "README.md"
+packages = [{include = "first_django"}]
+
+[tool.poetry.dependencies]
+python = "3.11"
+django = "^4.2.2"
+
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.3.0"
+flake8 = "^6.0.0"
+isort = "^5.12.0"
+black = "^23.3.0"
+flake8-isort = "^6.0.0"
+pyproject-flake8 = "^6.0.0.post1"
+flake8-bugbear = "^23.6.5"
+flake8-builtins = "^2.1.0"
+flake8-unused-arguments = "^0.0.13"
+pep8-naming = "^0.13.3"
+flake8-pytest-style = "^1.7.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
