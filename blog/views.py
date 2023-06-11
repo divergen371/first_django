@@ -10,5 +10,5 @@ class PostList(ListView):
 
 
 class PostDetail(DetailView):
-    nodel = Post
+    model = Post
     context_object_name = "post"
