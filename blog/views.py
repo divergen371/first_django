@@ -16,10 +16,10 @@ class PostDetail(DetailView):
 
     def get_object(self):
         """
-        直接記事URLにアクセスしても,公開フラグがFalseの場合 Permission Deniedを返す.
+        直接記事URLにアクセスしても,記事が下書きである場合・管理者でないユーザーのアクセスに対してPermission Deniedを返す.
         """
         post = super().get_object()
-        if post.is_published:
+        if post.is_published or self.request.user.is_authenticated: 
             return post
         else:
             raise PermissionDenied
